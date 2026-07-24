@@ -4,12 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="MR WHITE 小白首批全球限量预订。一个能被装扮、被反复把玩，也会慢慢了解你的 AI 潮流玩具。" />
+    <script>
+      (() => {
+        const mobileDeckQuery = window.matchMedia("(max-width: 760px), (orientation: landscape) and (max-height: 520px)");
+        const initialHash = window.location.hash.replace("#", "");
+        if (!initialHash || !mobileDeckQuery.matches) return;
+        window.__mrWhiteDeckTarget = initialHash;
+        window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+      })();
+    </script>
     <meta name="robots" content="noindex, nofollow" />
     <link rel="preload" as="image" href="assets/mr-white-mobile-hero-v1.png" fetchpriority="high" />
     <link rel="preload" as="image" href="assets/white-standard-base-body-v5-2-face-display-state-board.png" />
     <link rel="preload" as="image" href="assets/xiaobai-nine-style-lineup-v1.png" />
     <title>MR WHITE | 小白首批预订</title>
-    <link rel="stylesheet" href="styles.css?v=20260724-air-landscape5" />
+    <link rel="stylesheet" href="styles.css?v=20260724-air-landscape6" />
   </head>
   <body>
     <a class="skip-link" href="#reserve">跳到预订表单</a>
@@ -168,6 +177,6 @@
       <div class="dialog-ticket"><span>FIRST DROP / 999 UNITS</span><strong id="reservation-id"></strong><span>CNY 333 PAYMENT DEMO ONLY</span></div>
       <button class="button button-primary" id="dialog-confirm" type="button">知道了</button>
     </dialog>
-    <script src="app.js?v=20260724-air-landscape5"></script>
+    <script src="app.js?v=20260724-air-landscape6"></script>
   </body>
 </html>

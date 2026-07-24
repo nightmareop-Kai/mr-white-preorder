@@ -106,7 +106,8 @@ function syncMobileDeck() {
     return;
   }
 
-  const requestedId = window.location.hash.replace("#", "");
+  const requestedId = window.__mrWhiteDeckTarget || window.location.hash.replace("#", "");
+  window.__mrWhiteDeckTarget = "";
   const requestedIndex = requestedId ? findDeckIndex(requestedId) : -1;
   showDeckPage(requestedIndex >= 0 ? requestedIndex : activeDeckIndex);
 }
