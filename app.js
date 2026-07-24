@@ -11,7 +11,7 @@ const deckNext = document.querySelector("#deck-next");
 const deckCurrent = document.querySelector("#deck-page-current");
 const deckTotal = document.querySelector("#deck-page-total");
 const deckLabel = document.querySelector("#deck-page-label");
-const mobileDeckQuery = window.matchMedia("(max-width: 760px)");
+const mobileDeckQuery = window.matchMedia("(max-width: 760px), (orientation: landscape) and (max-height: 520px)");
 const storageKey = "mrWhiteFirstDropReservation";
 let activeDeckIndex = Math.max(0, deckSlides.findIndex((slide) => slide.classList.contains("is-active")));
 

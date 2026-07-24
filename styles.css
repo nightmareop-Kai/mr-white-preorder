@@ -150,7 +150,7 @@ input[type="checkbox"] { width: 16px; height: 16px; flex: 0 0 auto; margin: 1px 
   .reserve-intro { border-right: 0; border-bottom: 1px solid var(--line-dark); }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 760px), (orientation: landscape) and (max-height: 520px) {
   html, body { height: 100%; overflow: hidden; }
   html { scroll-behavior: auto; }
   body { padding-bottom: 0; overscroll-behavior: none; }
@@ -224,6 +224,38 @@ input[type="checkbox"] { width: 16px; height: 16px; flex: 0 0 auto; margin: 1px 
   .deck-progress { display: grid; grid-template-columns: auto auto auto; justify-content: center; column-gap: 4px; margin: 0; font-family: var(--font-display); font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-align: center; }
   .deck-progress strong { color: var(--lime); font-size: 16px; line-height: 0.9; }
   .deck-progress small { grid-column: 1 / -1; margin-top: 5px; color: #9b9791; font-size: 9px; line-height: 1; }
+}
+
+@media (orientation: landscape) and (min-width: 800px) and (max-height: 520px) {
+  .site-header { min-height: 48px; padding: 7px 24px; }
+  .brand-cn { font-size: 24px; }
+  .nav-cta { padding: 7px 10px; }
+  .hero.mobile-slide { padding: 58px 24px 60px; align-items: flex-start; }
+  .mobile-hero-image { top: 42px; right: 205px; width: 150px; }
+  .hero-copy { width: min(430px, calc(100% - 398px)); padding-bottom: 0; }
+  .hero .eyebrow { margin-bottom: 8px; }
+  h1 { margin-bottom: 8px; font-size: 72px; line-height: 0.75; }
+  .hero-subtitle { margin-bottom: 5px; font-size: 16px; }
+  .hero-summary { max-width: 390px; margin-bottom: 12px; font-size: 12px; line-height: 1.45; }
+  .hero .button { padding: 10px 14px; font-size: 11px; }
+  .hero-rulebook { right: 24px; bottom: 58px; width: 175px; }
+  .hero-rulebook div { min-height: 46px; padding: 5px 6px 4px; }
+  .hero-rulebook strong { margin: 1px 0 0; font-size: 20px; }
+  .hero-rulebook span, .hero-rulebook small { font-size: 7px; }
+  .mobile-deck-controls { min-height: 54px; padding: 5px 14px; }
+  .deck-control { width: 40px; height: 40px; }
+  .statement.mobile-slide,
+  .styles.mobile-slide,
+  .reserve-intro.mobile-slide,
+  .reserve-form.mobile-slide { padding: 64px 24px 72px; }
+  .product-breakdown.mobile-slide { grid-template-rows: minmax(180px, 58svh) auto; }
+  .styles.mobile-slide { grid-template-columns: minmax(0, 1fr) 220px; grid-template-rows: auto minmax(0, 1fr); column-gap: 24px; row-gap: 6px; overflow: hidden; }
+  .styles .section-marker { grid-column: 1; }
+  .styles .styles-heading { grid-column: 1; grid-row: 2; align-self: center; }
+  .styles h2 { font-size: 44px; line-height: 0.95; }
+  .styles .lineup-figure { grid-column: 2; grid-row: 1 / span 2; height: 100%; align-items: center; justify-content: center; }
+  .styles .lineup-figure img { width: auto; max-width: 100%; max-height: calc(100svh - 120px); margin: 0; }
+  .styles .lineup-figure figcaption { display: none; }
 }
 
 @media (max-width: 560px) {
