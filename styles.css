@@ -173,8 +173,8 @@ input[type="checkbox"] { width: 16px; height: 16px; flex: 0 0 auto; margin: 1px 
   .hero-copy { width: min(310px, 100%); padding-bottom: 150px; }
   .hero-summary { max-width: 288px; font-size: 13px; }
   .hero-rulebook { right: 18px; bottom: 70px; width: calc(100% - 36px); grid-template-columns: repeat(2, 1fr); }
-  .hero-rulebook div { min-height: 60px; padding: 8px; border-bottom: 1px solid rgba(244, 241, 236, 0.42); }
-  .hero-rulebook strong { margin: 3px 0 1px; font-size: 26px; }
+  .hero-rulebook div { min-height: 52px; padding: 6px 8px 5px; border-bottom: 1px solid rgba(244, 241, 236, 0.42); }
+  .hero-rulebook strong { margin: 2px 0 0; font-size: 23px; }
   .hero-rulebook div:nth-child(2) { border-right: 1px solid rgba(244, 241, 236, 0.42); }
   .scroll-cue { display: none; }
 
