@@ -144,3 +144,9 @@ if (mobileDeckQuery.addEventListener) {
 }
 
 syncMobileDeck();
+
+window.addEventListener("load", () => {
+  if (!mobileDeckQuery.matches) return;
+  syncMobileDeck();
+  window.requestAnimationFrame(() => window.scrollTo(0, 0));
+});
