@@ -87,6 +87,7 @@ function showDeckPage(index, updateHash = false) {
 
   const activeSlide = deckSlides[activeDeckIndex];
   activeSlide.scrollTop = 0;
+  window.scrollTo(0, 0);
   deckBack.disabled = activeDeckIndex === 0;
   deckNext.disabled = activeDeckIndex === deckSlides.length - 1;
   deckCurrent.textContent = String(activeDeckIndex + 1).padStart(2, "0");
