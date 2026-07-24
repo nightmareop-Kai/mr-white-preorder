@@ -11,25 +11,25 @@
   <body>
     <a class="skip-link" href="#reserve">跳到预订表单</a>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="MR WHITE 首页">
+      <a class="brand" href="#top" data-deck-target="top" aria-label="MR WHITE 首页">
         <span class="brand-cn">小白</span><span class="brand-en">MR WHITE</span>
       </a>
       <nav aria-label="页面导航">
-        <a href="#why">WHAT IT IS</a>
-        <a href="#styles">STYLE</a>
-        <a class="nav-cta" href="#reserve">JOIN 001</a>
+        <a href="#why" data-deck-target="why">WHAT IT IS</a>
+        <a href="#styles" data-deck-target="styles">STYLE</a>
+        <a class="nav-cta" href="#reserve" data-deck-target="reserve">JOIN 001</a>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
+    <main id="top" class="mobile-deck">
+      <section class="hero mobile-slide is-active" data-mobile-slide data-mobile-id="top" data-mobile-label="MR WHITE" aria-labelledby="hero-title">
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="hero-copy">
           <p class="eyebrow">FIRST GLOBAL DROP / 001 OF 999</p>
           <h1 id="hero-title">MR<br />WHITE</h1>
           <p class="hero-subtitle">年轻人的第一个 AI 玩具</p>
           <p class="hero-summary">不是一台长得像玩具的设备。<br />它是一个可以被你装扮、反复把玩，也会慢慢了解你的实体角色。</p>
-          <a class="button button-primary" href="#reserve">加入首批预订</a>
+          <a class="button button-primary" href="#reserve" data-deck-target="reserve">加入首批预订</a>
         </div>
         <div class="hero-rulebook" aria-label="首批发售规则">
           <div><span>WORLDWIDE</span><strong>999</strong><small>UNITS ONLY</small></div>
@@ -40,7 +40,7 @@
         <a class="scroll-cue" href="#why">SCROLL TO MEET HIM <span aria-hidden="true">↓</span></a>
       </section>
 
-      <section class="statement section-shell" id="why" aria-labelledby="statement-title">
+      <section class="statement section-shell mobile-slide" id="why" data-mobile-slide data-mobile-label="CHARACTER" aria-labelledby="statement-title">
         <div class="section-marker">01 / CHARACTER</div>
         <div class="statement-content">
           <p class="eyebrow">AI + COLLECTIBLE TOY</p>
@@ -55,7 +55,7 @@
         </div>
       </section>
 
-      <section class="product-breakdown" aria-label="小白基础本体展示">
+      <section class="product-breakdown mobile-slide" id="base-body" data-mobile-slide data-mobile-label="BASE BODY" aria-label="小白基础本体展示">
         <div class="breakdown-image-wrap">
           <img src="assets/white-standard-base-body-v5-2-face-display-state-board.png" alt="小白白色标准素体及低信息脸部状态示意" />
         </div>
@@ -66,7 +66,7 @@
         </div>
       </section>
 
-      <section class="styles section-shell" id="styles" aria-labelledby="styles-title">
+      <section class="styles section-shell mobile-slide" id="styles" data-mobile-slide data-mobile-label="STYLE CAPSULES" aria-labelledby="styles-title">
         <div class="section-marker">02 / STYLE CAPSULES</div>
         <div class="styles-heading">
           <p class="eyebrow">ONE BODY. DIFFERENT YOU.</p>
@@ -78,8 +78,8 @@
         </figure>
       </section>
 
-      <section class="reserve-section" id="reserve" aria-labelledby="reserve-title">
-        <div class="reserve-intro">
+      <section class="reserve-section" aria-label="小白预订">
+        <div class="reserve-intro mobile-slide" id="reserve" data-mobile-slide data-mobile-label="FIRST DROP">
           <div>
             <p class="eyebrow">FIRST GLOBAL DROP / 999 UNITS</p>
             <h2 id="reserve-title">预订小白。</h2>
@@ -96,7 +96,7 @@
           </div>
         </div>
 
-        <form class="reserve-form" id="reservation-form" novalidate>
+        <form class="reserve-form mobile-slide" id="reservation-form" data-mobile-slide data-mobile-label="YOUR MR WHITE" novalidate>
           <div class="form-heading">
             <p class="eyebrow">JOIN THE LIST</p>
             <p>留下联络方式，先选一个你想带走的小白。</p>
@@ -147,11 +147,14 @@
       <span>小白 / MR WHITE</span><span>AI COLLECTIBLE TOY / FIRST DROP STUDY</span><span>© 2026</span>
     </footer>
 
-    <a class="mobile-reserve-bar" id="mobile-reserve-bar" href="#reserve" aria-label="前往小白首批预订">
-      <span>FIRST DROP / 999</span>
-      <strong>CNY 333</strong>
-      <b>预订</b>
-    </a>
+    <div class="mobile-deck-controls" aria-label="移动端翻页导航">
+      <button class="deck-control" id="deck-back" type="button" title="上一页" aria-label="上一页" disabled>←</button>
+      <p class="deck-progress" aria-live="polite">
+        <strong id="deck-page-current">01</strong><span>/</span><span id="deck-page-total">06</span>
+        <small id="deck-page-label">MR WHITE</small>
+      </p>
+      <button class="deck-control" id="deck-next" type="button" title="下一页" aria-label="下一页">→</button>
+    </div>
 
     <dialog class="reservation-dialog" id="reservation-dialog" aria-labelledby="dialog-title">
       <button class="dialog-close" type="button" id="dialog-close" aria-label="关闭">×</button>
